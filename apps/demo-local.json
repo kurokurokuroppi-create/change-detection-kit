@@ -1,0 +1,8 @@
+{
+  "app": "demo-local",
+  "state_dir": "state",
+  "notify": [ { "type": "log" } ],
+  "sources": [
+    { "name": "demo-cloud", "type": "rss", "url": "http://127.0.0.1:8799/feed.xml", "interval_minutes": 5, "options": { "volatile_tokens": [] } }
+  ]
+}
