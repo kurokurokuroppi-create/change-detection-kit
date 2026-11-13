@@ -1,0 +1,23 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.backends.legacy:build"
+
+[project]
+name = "watchkit"
+version = "0.1.0"
+description = "Change-detection engine: watch external sources, detect meaningful changes, summarize in Japanese, notify."
+readme = "README.md"
+license = { text = "MIT" }
+requires-python = ">=3.12"
+# stdlib-only: no external runtime dependencies
+
+[project.scripts]
+watchkit = "watchkit.__main__:main"
+
+[tool.setuptools.packages.find]
+where = ["."]
+include = ["watchkit*"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+addopts = "-q"

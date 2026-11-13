@@ -1,0 +1,66 @@
+{
+  "app": "status-watchdog",
+  "state_dir": "state",
+  "notify": [
+    {
+      "type": "log"
+    }
+  ],
+  "sources": [
+    {
+      "name": "azure-status",
+      "type": "rss",
+      "url": "https://azurestatuscdn.azureedge.net/en-us/status/feed/",
+      "interval_minutes": 5,
+      "options": {
+        "volatile_tokens": []
+      }
+    },
+    {
+      "name": "microsoft365-status",
+      "type": "rss",
+      "url": "https://status.cloud.microsoft/api/feed/mac",
+      "interval_minutes": 5,
+      "options": {
+        "volatile_tokens": []
+      }
+    },
+    {
+      "name": "aws-status",
+      "type": "rss",
+      "url": "https://status.aws.amazon.com/rss/all.rss",
+      "interval_minutes": 10,
+      "options": {
+        "volatile_tokens": []
+      }
+    },
+    {
+      "name": "github-status",
+      "type": "json",
+      "url": "https://www.githubstatus.com/api/v2/incidents.json",
+      "interval_minutes": 5,
+      "options": {
+        "items_field": "incidents",
+        "id_field": "id",
+        "title_field": "name",
+        "body_field": "shortlink",
+        "link_field": "shortlink",
+        "published_field": "created_at"
+      }
+    },
+    {
+      "name": "cloudflare-status",
+      "type": "json",
+      "url": "https://www.cloudflarestatus.com/api/v2/incidents.json",
+      "interval_minutes": 10,
+      "options": {
+        "items_field": "incidents",
+        "id_field": "id",
+        "title_field": "name",
+        "body_field": "shortlink",
+        "link_field": "shortlink",
+        "published_field": "created_at"
+      }
+    }
+  ]
+}

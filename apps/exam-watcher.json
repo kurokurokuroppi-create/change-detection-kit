@@ -1,0 +1,59 @@
+{
+  "app": "exam-watcher",
+  "state_dir": "state",
+  "notify": [
+    { "type": "log" }
+  ],
+  "sources": [
+    {
+      "name": "generative-ai-passport",
+      "type": "html",
+      "url": "https://www.guga.or.jp/",
+      "interval_minutes": 60,
+      "options": {
+        "selector": "main",
+        "volatile_tokens": []
+      }
+    },
+    {
+      "name": "g-test",
+      "type": "html",
+      "url": "https://www.g-test.jp/",
+      "interval_minutes": 60,
+      "options": {
+        "selector": "main",
+        "volatile_tokens": []
+      }
+    },
+    {
+      "name": "it-passport-ipa",
+      "type": "html",
+      "url": "https://www.jitec.ipa.go.jp/1_11seido/ip.html",
+      "interval_minutes": 120,
+      "options": {
+        "selector": "main",
+        "volatile_tokens": []
+      }
+    },
+    {
+      "name": "fundamental-it-engineer-ipa",
+      "type": "html",
+      "url": "https://www.jitec.ipa.go.jp/1_11seido/fe.html",
+      "interval_minutes": 120,
+      "options": {
+        "selector": "main",
+        "volatile_tokens": []
+      }
+    },
+    {
+      "name": "ai-kentei-jdla",
+      "type": "html",
+      "url": "https://www.jdla.org/certificate/",
+      "interval_minutes": 120,
+      "options": {
+        "selector": ".entry-content",
+        "volatile_tokens": []
+      }
+    }
+  ]
+}
