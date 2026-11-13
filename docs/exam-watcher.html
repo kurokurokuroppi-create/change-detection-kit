@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>exam-watcher — 状態ボード</title>
+  <style>
+* { box-sizing: border-box; margin: 0; padding: 0; }
+body {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+    background: #f5f5f5;
+    color: #222;
+    padding: 2rem;
+    line-height: 1.5;
+}
+h1 { font-size: 1.6rem; margin-bottom: 0.25rem; }
+.meta { color: #666; font-size: 0.9rem; margin-bottom: 2rem; }
+h2 { font-size: 1.1rem; margin: 1.5rem 0 0.75rem; }
+table {
+    width: 100%;
+    border-collapse: collapse;
+    background: #fff;
+    border-radius: 6px;
+    overflow: hidden;
+    box-shadow: 0 1px 3px rgba(0,0,0,.12);
+    margin-bottom: 1.5rem;
+}
+th {
+    background: #2d2d2d;
+    color: #fff;
+    text-align: left;
+    padding: 0.6rem 0.9rem;
+    font-weight: 600;
+    font-size: 0.88rem;
+}
+td {
+    padding: 0.55rem 0.9rem;
+    border-bottom: 1px solid #eee;
+    font-size: 0.9rem;
+    vertical-align: top;
+}
+tr:last-child td { border-bottom: none; }
+tr:hover td { background: #fafafa; }
+.badge {
+    display: inline-block;
+    padding: 0.15rem 0.55rem;
+    border-radius: 999px;
+    font-size: 0.78rem;
+    font-weight: 600;
+    white-space: nowrap;
+}
+.badge-open     { background: #fee2e2; color: #b91c1c; }
+.badge-resolved { background: #d1fae5; color: #065f46; }
+.badge-ok       { background: #dbeafe; color: #1d4ed8; }
+.badge-unknown  { background: #f3f4f6; color: #6b7280; }
+.badge-changed  { background: #fef3c7; color: #92400e; }
+.kind-incident_opened   { color: #b91c1c; }
+.kind-incident_updated  { color: #92400e; }
+.kind-incident_resolved { color: #065f46; }
+.kind-page_changed      { color: #1d4ed8; }
+pre {
+    background: #f8f8f8;
+    border: 1px solid #e0e0e0;
+    border-radius: 4px;
+    padding: 0.5rem;
+    font-size: 0.78rem;
+    overflow-x: auto;
+    white-space: pre-wrap;
+    word-break: break-word;
+    max-height: 10rem;
+    overflow-y: auto;
+}
+</style>
+</head>
+<body>
+  <h1>exam-watcher 状態ボード</h1>
+  <p class="meta">
+    全体状態: <span class="badge badge-resolved">全サービス正常</span> &nbsp;|&nbsp;
+    最終更新: 2026-11-13 16:59:04 UTC &nbsp;|&nbsp;
+    監視ソース数: 2
+  </p>
+
+  <h2>ソース別状態</h2>
+  <table><thead><tr><th>ソース</th><th>状態</th><th>最新インシデント</th><th>コンテンツハッシュ</th></tr></thead><tbody><tr><td><strong>generative-ai-passport</strong></td><td><span class="badge badge-ok">正常</span></td><td></td><td><code>96b05b608354</code></td></tr><tr><td><strong>ai-kentei-jdla</strong></td><td><span class="badge badge-ok">正常</span></td><td></td><td><code>88fa4e8be8c1</code></td></tr></tbody></table>
+
+  <h2>イベント履歴（直近50件）</h2>
+  <p>（イベント履歴なし）</p>
+
+  <p class="meta" style="margin-top:2rem;">
+    watchkit v0.1 — Change Detection Kit
+  </p>
+</body>
+</html>
